@@ -46,7 +46,11 @@ public:
         cerr << "papa:\t" << y << endl;
         cerr << "\n\n";
     }
-    NLOHMANN_DEFINE_TYPE_INTRUSIVE(B, x, y, ptr); //error
+
+    B(A* base) : x(base->k), y(base->k), ptr(base) {}
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(B, x, y); 
+    //NLOHMANN_DEFINE_TYPE_INTRUSIVE(B, x, y, ptr); - error
 };
 
 
