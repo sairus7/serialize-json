@@ -31,12 +31,13 @@ public:
     NLOHMANN_DEFINE_TYPE_INTRUSIVE(A, k);
 };
     
-class DifFilter {
+class B {
 public:
     int x;
     int y;
     A* ptr;
-    DifFilter() {
+
+    B() {
         this->x = 0;
         this->y = 1;
     }
@@ -45,7 +46,7 @@ public:
         cerr << "papa:\t" << y << endl;
         cerr << "\n\n";
     }
-    NLOHMANN_DEFINE_TYPE_INTRUSIVE(DifFilter, x, y);
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(B, x, y);
 };
 
 
