@@ -2,6 +2,7 @@
 	"name": "serialize-json",
 	"version": "1.0",
 	"dependencies": [
-		"nlohmann-json"
+		"nlohmann-json",
+		"msgpack"
 	]
 }
